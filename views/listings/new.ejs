@@ -1,0 +1,104 @@
+<% layout("layouts/boilerplate") %>
+<body>
+    <div class="new-form offset-1">
+        <h2>Create a Post</h2><br>
+        <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div>
+                <label for="title">Title:</label><br>
+                <input type="text" required name="listing[title]" placeholder="Title" class="form-control ">
+                <div class="invalid-feedback">
+                    Please enter a valid Title.
+                </div>
+                <div class="valid-feedback">
+                    Title Looks good!
+                </div>
+            </div><br>
+
+            <div>
+                <label for="description">Description:</label><br>
+                <textarea type="text" name="listing[description]" placeholder="Description" class="form-control"></textarea>
+                <div class="invalid-feedback">
+                    Please enter a valid Description.
+                </div>
+                <div class="valid-feedback">
+                    Description Looks good!
+                </div>
+            </div>
+            <br>
+            <div class="d-flex gap-5 ">
+                <div class=" col-md-6">
+                    <label for="image">Upload Image </label><br>
+                    <input id="image" required name="listing[image]" placeholder="Image" type="file" class="form-control">
+                    <div class="invalid-feedback">
+                        Please Upload a valid Image .
+                    </div>
+                    <div class="valid-feedback">
+                        Image Looks good!
+                    </div>
+                </div class="col-md-6 categories">
+                    <p class="mb-1">Choose suitable Categories :</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <input type="checkbox" class="btn-check" id="Forts" name="listing[categories]" value="Forts">
+                        <label class="btn btn-outline-danger" for="Forts" >Forts</label>
+
+                        <input type="checkbox" class="btn-check" id="Mountains" name="listing[categories]" value="Mountains">
+                        <label class="btn btn-outline-danger" for="Mountains">Mountains</label>
+
+                        <input type="checkbox" class="btn-check" id="Hiking" name="listing[categories]" value="Hiking">
+                        <label class="btn btn-outline-danger" for="Hiking">Hiking</label>
+
+                        <input type="checkbox" class="btn-check" id="Pools" name="listing[categories]" value="Pools">
+                        <label class="btn btn-outline-danger" for="Pools">Pools</label>
+
+                        <input type="checkbox" class="btn-check" id="Farms" name="listing[categories]" value="Farms">
+                        <label class="btn btn-outline-danger" for="Farms">Farms</label>
+
+                        <input type="checkbox" class="btn-check" id="Arctic" name="listing[categories]" value="Arctic">
+                        <label class="btn btn-outline-danger" for="Arctic">Arctic</label>
+
+                        <input type="checkbox" class="btn-check" id="Cozy" name="listing[categories]" value="Cozy">
+                        <label class="btn btn-outline-danger" for="Cozy">Cozy</label>
+                </div>
+            </div>
+            <br>
+            
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" > Price :</label><br>
+                    <input type="" required min="1" name="listing[price]" placeholder="Price" class="form-control">
+                    <div class="invalid-feedback">
+                        Please enter a valid Price.
+                    </div>
+                    <div class="valid-feedback">
+                        Price Looks good!
+                    </div>
+                </div><br>
+
+                <div class="mb-3 col-md-8">
+                    <label for="location">Location :</label><br>
+                    <input type="text" required name="listing[location]" placeholder="Location" class="form-control">
+                    <div class="invalid-feedback">
+                        Please enter a valid Location.
+                    </div>
+                    <div class="valid-feedback">
+                        Location Looks good!
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="country">Country :</label><br>
+                <input type="text" required name="listing[country]" placeholder="Country" class="form-control">
+                <div class="invalid-feedback">
+                    Please enter a valid Country.
+                </div>
+                <div class="valid-feedback">
+                    Country Looks good!
+                </div>
+            </div><br>
+            <div>
+            <button type="submit" class="btn btn-dark btn-primary">Submit</button></div>
+            
+        </form>
+    </div> 
+</body>

@@ -1,0 +1,347 @@
+*{
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+button{
+    cursor: pointer;
+}
+
+.navbar{
+    height: 5rem; 
+    background-color: white;
+}
+.fa-compass{
+    color: #fe242d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+.footer{
+    text-align: center;
+    background-color: lightgrey;
+    padding-top:1rem ;
+    padding-bottom:1rem ;
+    position: sticky;
+    bottom: 0 !important;
+}
+
+
+.cards-body{
+    padding: 0rem !important; 
+    margin: 0rem 3rem 0rem 3rem;
+}
+.main-div{
+    padding: 3rem !important;
+    padding-top: 1rem !important;
+
+}
+.card-img-top{
+    border-radius: rem !important;text-decoration: none;
+    width: 30rem;
+}
+
+.listing-card{
+    display: flex;
+    border: solid 0.5px;
+    border-radius: 0.5rem !important;
+    gap: 3rem;
+}
+.card-body p{
+    margin-top: 2rem;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.index-card{
+    margin-bottom: 2rem;
+    display: flex;
+    
+
+}
+.card-text-index {
+    margin: 0.5rem;
+    text-decoration: none !important;
+}
+.card-img-overlay{
+    border: none !important;
+    
+}
+.img{
+    height: 5rem;
+}
+
+.show-listing{
+    padding: 2rem;
+}
+.show-card{
+    text-align: center ; 
+}
+.cards-div{
+    border: none !important;
+
+}
+
+.card-text{
+    margin-left: 5rem;
+    width: 30rem;
+    text-align: left;
+    
+    }
+
+
+
+.rating-box{
+    display: flex;
+    align-items: center;
+    padding: 0rem;
+    margin: 0rem;
+    height: 1.5rem;
+}
+.reviews-card {
+  padding: 0.5rem 0rem 0.5rem ,0rem !important;
+  display: flex;
+  width: 300px;
+    min-width: 300px;  
+  flex-shrink: 0;    
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  margin-right:2rem ;
+}
+#allReviews{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0rem 4rem 0rem 4rem;
+    gap: 1rem;
+}
+
+.reviews-card h5 p{
+    padding: 0;
+    margin: 0;
+}
+.reviews-card p{
+    padding: 0;
+    margin: 0;
+}
+.reviews-card form{
+    padding: 0;
+    margin: 0;
+}
+
+#comment{
+    border: none;
+    border: solid 0.5px;
+    border-radius: 5pxrem;
+    padding: 0.5rem;
+    margin: 0rem;
+}
+.comment-box label{
+    display: flex !important;
+}
+.comment-box button{
+    display: flex !important;
+    justify-content: center;
+    border-radius: 1rem;
+}
+.review-box{
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0rem 0rem 0rem 4rem;
+    font-size: 15px;
+}
+#review-btn{
+    border: none !important;
+    border-radius: 2rem !important;
+}
+   
+.card-img-overlay p{
+    opacity: 0;
+    
+}
+.card-img-overlay:hover{
+    opacity: 0.2 !important;
+    background-color: white;
+    border: none !important;
+
+}
+
+.new-form{
+    width: 70rem;
+    padding: 2rem;
+    
+
+}
+
+.search-bar{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.search-input{
+    border-radius: 2rem !important;
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+
+}
+.search-icon{
+    border: none;
+    display: flex;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background:transparent ;
+    font-size: 1rem;
+    padding: 0.5rem 1rem  0.5rem 1rem;
+    margin-left: 0.5rem;
+    border: solid 1px;
+    border-radius: 2rem;
+    background-color: #fe242d;
+    color: white;
+}
+
+.search-icon:hover{
+    background-color: white !important;
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+.Container {
+    flex: 1;  
+}
+footer {
+    background-color: lightgrey;
+    text-align: center;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.edit-img{
+    height: 20rem;
+}
+
+.map{
+    box-shadow: 4px 4px 8px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.map-box{
+    text-align: left;
+}
+
+#filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 4rem;
+    border: solid 0.5px;
+    padding: 1rem 0rem 0rem 0.5rem;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+.filters{
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    margin: 0rem 1rem 0rem 1rem;
+}
+.filters:hover{
+    opacity: 1;
+    cursor: pointer;
+    
+}
+
+.filters p{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-icon{
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+.filters a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.tax-switch-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-right: 4rem !important;
+    margin-top: 1rem;
+    border: solid 0.5px;
+    border-radius: 2rem;
+    height: 3rem;
+    padding: 0rem 1rem 0rem 1rem;
+    cursor: pointer;
+}
+.form-switch{
+
+}
+.tax-switch{
+    cursor: pointer;
+}
+.tax-info{
+    display: none;
+}
+.parent-filter{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+}
+
+.no-listing{
+    font-size: 1.5rem;
+}
+
+.categories label{
+    background-color: #fe242d;
+}

@@ -1,0 +1,102 @@
+<% layout("layouts/boilerplate") %>
+<body>
+    <div class="parent-filter">
+        <div id="filters"> 
+            <div class="filters">
+                <div ><i class="fa-solid fa-fire filter-icon" ></i></div>
+                <a href="/listings"><p >Trending</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-building filter-icon"></i></div>
+                <a href="/listings"><p>Best Rooms</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-bed filter-icon"></i></i></div>
+                <a href="/listings"><p>Rooms</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-building-circle-arrow-right filter-icon"></i></div>
+                <a href="/listings?category=Iconic Cities"><p>Iconic Cities</p></a>
+            </div>
+            <div class="filters">
+                <div ><i class="fa-solid fa-fire filter-icon" ></i></div>
+                <a href="/listings"><p>Trending</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-building filter-icon"></i></div>
+                <a href="/listings"><p>Best Rooms</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-regular fa-snowflake filter-icon"></i></div>
+                <a href="/listings?category=Arctic"><p>Arctic</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-tractor filter-icon"></i></div>
+                <a href="/listings?category=Farms"><p>Farms</p></a>
+            </div>
+            <div class="filters">
+                <div ><i class="fa-solid fa-person-swimming filter-icon"></i></div>
+                <a href="/listings?category=Pools"><p>Pools</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-person-hiking filter-icon"></i></div>
+                <a href="/listings?category=Hiking"><p>Hiking</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-solid fa-mountain filter-icon"></i></div>
+                <a href="/listings?category=Mountains"><p>Mountains</p></a>
+            </div>
+            <div class="filters">
+                <div><i class="fa-brands fa-fort-awesome filter-icon"></i></div>
+                <a href="/listings?category=Forts"><p>Forts</p></a>
+            </div>
+        </div>
+        <div class="tax-switch-div  ">
+            <div class="form-check-reverse form-switch tax-switch ms-auto">
+                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
+                <label class="form-check-label" for="switchCheckChecked">Show before Taxes</label>
+            </div>
+        </div>
+    </div>
+        
+    <div>
+        <div class="main-div">
+            <% if(allListings.length){  %>
+            <div class="cards-div row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
+                <%   for(let listings of allListings){%>
+                    <a href="/listings/<%= listings.id %>" class="text-decoration-none">
+                        <div class="card index-card text-decoration-none"  >
+                            <img src="<%= listings.image.url %>"  style="height: 18rem;" class="card-img-top" alt="...">
+                            <div class="card-img-overlay"></div>
+                                <div class="index-card">
+                                    <span class="card-text-index"> 
+                                        <b><%= listings.title %></b><br>
+                                        &#8377;
+                                        <%= listings.price?.toLocaleString("en-IN") || "N/A" %>
+                                        / per Night <i class="tax-info">+18% GST</i></span>
+                                </div>
+                        </div>
+                    </a>
+                <%}%>
+            </div><%} else {%>
+                <div class="no-listing">
+                <p >No available Listing :(</p>
+                </div><%}%>
+        </div>
+    </div>
+</body>
+<script>
+    let taxSwitch = document.getElementById("switchCheckChecked");
+    taxSwitch.addEventListener("click" , ()=>{
+        console.log("clicked");
+        let taxInfo = document.getElementsByClassName("tax-info");
+        for(info of taxInfo){
+            if(info.style.display != "inline"){
+                info.style.display = "inline" ;
+            }else{
+                info.style.display = "none" ;
+            }
+        }
+    });
+
+</script>
