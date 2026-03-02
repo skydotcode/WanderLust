@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const initData = require("/Users/sachin/MAJORPROJECT/init/data.js");
-const Listing = require("/Users/sachin/MAJORPROJECT/models/listings.js");
+const initData = require("../init/data.js");
+const Listing = require("../models/listings.js");
 
 main().then(()=>{
     console.log("connected to DB")
