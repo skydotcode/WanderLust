@@ -81,7 +81,7 @@
                             <h5 class="card-title"><p><%= review.author.username %></p></h5>
                             <p class="starability-result " data-rating="<%=review.rating %>"></p>
                             <p class=""><%= review.comment %></p>
-                             <% if(currUser.equals(review.author)){ %>
+                             <% if(currUser && currUser.equals(review.author)){ %>
                             <form method="post" action="/listings/<%= listing._id %>/reviews/<%=review._id%>?_method=DELETE">
                                 <button class="btn btn-dark"><i class="fa-solid fa-trash-can"></i>DELETE REVIEW</button>
                             </form>
@@ -91,8 +91,8 @@
                     <% }} %>
             </div>
             <hr>
-            <div class="col-md-8 mx-auto map-box">
-                <p>Location of the Property :</p>
+            <div class="col-md-8 mx-auto map-box map-container">
+                <span>Location of the Property :</span>
                 <img width="900" 
                     src="https://maps.geoapify.com/v1/staticmap?style=osm-bright&width=600&height=400&center=lonlat:<%=longitude%>,<%=latitude%>&zoom=4&scaleFactor=2&marker=lonlat:<%=longitude%>,<%=latitude%>;color:%23ff0000;size:large&apiKey=<%= process.env.MAP_API_KEY %>"
                     alt="map" class="map">

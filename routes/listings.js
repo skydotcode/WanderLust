@@ -46,7 +46,6 @@ router.get("/search" , async(req,res)=>{
         ]
     });
     return res.render("listings/index" , {allListings});
-
 });
 
 router.route("/:id")
@@ -56,7 +55,6 @@ router.route("/:id")
 
 //edit route
 router.get("/:id/edit" ,validateListing,isLoggedIn,wrapAsync( listingController.edit ))
-
 
 //index route
 // router.get("/" , wrapAsync(listingController.index));

@@ -28,8 +28,6 @@ const userRouter = require("./routes/user.js")
 
 
 const dbURL = process.env.ATLAS_URL;
-console.log("DB URL:", dbURL);     
-console.log("Session secret:", process.env.SECRET);
 
 main().then(()=>{
     console.log("connected to DB")
@@ -101,9 +99,9 @@ passport.deserializeUser(async (username, done) => {
 app.use((req,res,next)=>{
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
-    res.locals.currUser = req.user || null;
+    res.locals.currUser = req.user || null ;
     next();
-})
+});
 
 app.use("/listings" , listingRouter);
 app.use("/listings/:id/reviews" , reviewRouter);
