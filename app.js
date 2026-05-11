@@ -3,7 +3,8 @@ if(process.env.NODE_ENV != "production"){
 };
 
 const express = require("express");
-const MongoStore = require('connect-mongo').default;
+const connectMongo = require('connect-mongo');
+const MongoStore = connectMongo.default || connectMongo;
 const app = express();
 const mongoose = require("mongoose");
 const Listing = require("./models/listings.js");
@@ -55,6 +56,11 @@ const store = MongoStore.create({
         secret: process.env.SECRET  
     },
     touchAfter : 24 * 3600 ,
+    mongoOptions: {
+        ssl: true,
+        tls: true,
+        tlsAllowInvalidCertificates: true,
+    }
 });
 
 store.on("error" , (err)=>{
