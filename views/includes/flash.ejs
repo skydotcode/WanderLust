@@ -1,7 +1,7 @@
-<% if (success && success.length) {%>
+<% if (locals.success && locals.success.length) {%>
 <div class="alert col-6 offset-3 alert-success alert-dismissible fade show" role="alert">
 
-  <%= success %>
+  <%= locals.success %>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 
