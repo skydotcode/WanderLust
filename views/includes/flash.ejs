@@ -7,10 +7,10 @@
 
 <% } %>
 
-<% if (error && error.length) {%>
+<% if (locals.error && locals.error.length) {%>
 <div class="alert col-6 offset-3 alert-danger alert-dismissible fade show" role="alert">
 
-  <%= error %>
+  <%= locals.error %>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <% } %>
