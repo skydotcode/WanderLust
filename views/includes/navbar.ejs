@@ -17,7 +17,7 @@
       </form></div>
       <div class="navbar-nav ms-auto">
         
-        <% if(!currUser){ %>
+        <% if(!(currUser ? currUser.username : "")){ %>
         <a class="nav-link" href="/listings/new">List Your Property </a>
         <a class="nav-link " aria-current="page" href="/signup"><b>Sign-Up</b></a>
         <a class="nav-link" href="/login"><b>Sign In</b></a>
