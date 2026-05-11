@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "24"
+    "node": "24.x"
   },
   "name": "majorproject",
   "version": "1.0.0",
@@ -30,7 +30,6 @@
     "joi": "^18.0.2",
     "leaflet": "^1.9.4",
     "method-override": "^3.0.0",
-    "mongodb": "^7.1.0",
     "mongoose": "^9.6.2",
     "multer": "^2.0.2",
     "multer-storage-cloudinary": "^4.0.0",
