@@ -16,7 +16,6 @@ const ExpressError = require ("./utils/ExpressError.js")
 const session = require("express-session");
 const flash  = require ("connect-flash");
 
-console.log(flash);
 const cloudConfig = require("./cloudConfig");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -107,6 +106,10 @@ app.use((req,res,next)=>{
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user || null ;
     next();
+});
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK' })
 });
 
 app.use("/listings" , listingRouter);
