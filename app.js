@@ -102,9 +102,11 @@ passport.deserializeUser(async (username, done) => {
 });
 
 app.use((req,res,next)=>{
+  // console.log("sessionID:", req.sessionID, "| session:", req.session, "| user:", req.user);
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user || null ;
+    // console.log("res.locals.currUser",res.locals.currUser);
     next();
 });
 
@@ -112,9 +114,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' })
 });
 
+
+app.use("/" , userRouter);
 app.use("/listings" , listingRouter);
 app.use("/listings/:id/reviews" , reviewRouter);
-app.use("/" , userRouter);
+
 
 app.use((req,res,next)=>{
     next(new ExpressError(404 , "Page not Found"))
@@ -127,6 +131,6 @@ app.use((err,req,res,next)=>{
     // res.status(statusCode).send(message);
 })
 
-app.listen(8080 , ()=>{
+app.listen(9080 , ()=>{
     console.log("app is listening")
 })

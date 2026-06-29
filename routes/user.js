@@ -28,13 +28,9 @@ router.post("/login", (req, res, next) => {
     
     req.logIn(user, (err) => {
       if (err) return next(err);
-        console.log("Session after logIn:", req.session);
-  console.log("Session ID:", req.session.id);
-  console.log("Passport in session:", req.session.passport);
       req.flash("success", `Welcome back! ${user.username} `);
       req.session.save((err) => {
         if (err) return next(err);
-            console.log("Session saved successfully");
         res.redirect(redirectUrl);
       });
     });

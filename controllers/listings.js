@@ -12,9 +12,12 @@ module.exports.index = async (req , res)=>{
         return res.render("listings/index.ejs" , {allListings ,category });
     }
 
+    console.log("user",req.user);
+
     //index route
     let allListings = await Listing.find({});
     res.render("listings/index.ejs" , {allListings});
+
 };
 
 module.exports.renderNewForm = (req , res)=>{

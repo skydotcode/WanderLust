@@ -16,18 +16,18 @@
         <button class="search-icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i>  &nbsp;Search</button>
       </form></div>
       <div class="navbar-nav ms-auto">
-        
-        <% if(!locals.currUser){ %>
-        <a class="nav-link" href="/listings/new">List Your Property </a>
-        <a class="nav-link " aria-current="page" href="/signup"><b>Sign-Up</b></a>
-        <a class="nav-link" href="/login"><b>Sign In</b></a>
+
+        <% if (currUser) { %>
+          <a class="nav-link" href="/listings/new">Add new Property</a>
+          &nbsp;
+          <a class="navbar-brand"><i class="fa-solid fa-user"></i> <%= currUser.username %></a>
+          <a class="nav-link" href="/logout"><b>Log Out</b></a>
+        <% } else { %>
+          <a class="nav-link" href="/listings/new">List Your Property</a>
+          <a class="nav-link" aria-current="page" href="/signup"><b>Sign-Up</b></a>
+          <a class="nav-link" href="/login"><b>Sign In</b></a>
         <% } %>
-        <% if(locals.currUser){ %>
-        <a class="nav-link" href="/listings/new">Add new Property</a>
-        &nbsp;
-        <a class="navbar-brand"><i class="fa-solid fa-user"></i> <%= locals.currUser %></a>
-        <a class="nav-link" href="/logout"><b>Log Out</b></a>
-        <% } %>
+
       </div>
     </div>
   </div>
